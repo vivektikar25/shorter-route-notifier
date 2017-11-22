@@ -26,3 +26,7 @@ messaging.getToken()
 })
 .catch(function(err) {
 });
+
+messaging.onMessage(function(payload) {
+    console.log("Message received. ", payload);
+});
