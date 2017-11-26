@@ -16,12 +16,11 @@ messaging.getToken()
 .then(function(currentToken) {
   if (currentToken) {
       console.log("Current token is", currentToken)
+      document.getElementById("notification").innerHTML = currentToken
   } else {
     // Show permission request.
     console.log('No Instance ID token available. Request permission to generate one.');
     // Show permission UI.
-    updateUIForPushPermissionRequired();
-    setTokenSentToServer(false);
   }
 })
 .catch(function(err) {
